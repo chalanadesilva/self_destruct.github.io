@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title>Uh-Oh</title> 
+    </head>
+    <body>
+        <script>
+            const numPopups = 500;
+            const screenWidth = screen.width;
+            const screenHeight = screen.height;
+            const windowWidth = 300;
+            const windowHeight = 200;
+
+            for (let i = 0; i < numPopups; i++) {
+                // Calculate position based on the loop index to spread them out
+                const leftPos = (screenWidth / numPopups) * i;
+                const topPos = (screenHeight / numPopups) * i;
+
+                // Open window with specific position parameters
+                window.open('yes.html', '', 
+                    'width=' + windowWidth + 
+                    ',height=' + windowHeight + 
+                    ',left=' + leftPos + 
+                    ',top=' + topPos
+                );
+            }
+        </script>
+    </body>
+</html>
